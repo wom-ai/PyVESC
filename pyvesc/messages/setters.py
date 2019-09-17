@@ -1,7 +1,8 @@
 from pyvesc.messages.base import VESCMessage
 
 
-class SetDutyCycle(metaclass=VESCMessage):
+class SetDutyCycle(object):
+    __metaclass__ = VESCMessage
     """ Set the duty cycle.
 
     :ivar duty_cycle: Value of duty cycle to be set (range [-1e5, 1e5]).
@@ -12,7 +13,8 @@ class SetDutyCycle(metaclass=VESCMessage):
     ]
 
 
-class SetRPM(metaclass=VESCMessage):
+class SetRPM(object):
+    __metaclass__ = VESCMessage
     """ Set the RPM.
 
     :ivar rpm: Value to set the RPM to.
@@ -23,7 +25,8 @@ class SetRPM(metaclass=VESCMessage):
     ]
 
 
-class SetCurrent(metaclass=VESCMessage):
+class SetCurrent(object):
+    __metaclass__ = VESCMessage
     """ Set the current (in milliamps) to the motor.
 
     :ivar current: Value to set the current to (in milliamps).
@@ -34,7 +37,8 @@ class SetCurrent(metaclass=VESCMessage):
     ]
 
 
-class SetCurrentBrake(metaclass=VESCMessage):
+class SetCurrentBrake(object):
+    __metaclass__ = VESCMessage
     """ Set the current brake (in milliamps).
 
     :ivar current_brake: Value to set the current brake to (in milliamps).
@@ -44,7 +48,8 @@ class SetCurrentBrake(metaclass=VESCMessage):
         ('current_brake', 'i')
     ]
 
-class SetPosition(metaclass=VESCMessage):
+class SetPosition(object):
+    __metaclass__ = VESCMessage
     """Set the rotor angle based off of an encoder or sensor
     
     :ivar pos: Value to set the current position or angle to.
@@ -54,7 +59,8 @@ class SetPosition(metaclass=VESCMessage):
         ('pos', 'i', 1000000)
     ]
 
-class SetRotorPositionMode(metaclass=VESCMessage):
+class SetRotorPositionMode(object):
+    __metaclass__ = VESCMessage
     """Sets the rotor position feedback mode.
         
     It is reccomended to use the defined modes as below:
