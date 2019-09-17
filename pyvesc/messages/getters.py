@@ -6,25 +6,23 @@ class GetValues(metaclass=VESCMessage):
     id = 4
 
     fields = [
-            ('temp_mos1', 'h', 10),
-            ('temp_mos2', 'h', 10),
-            ('temp_mos3', 'h', 10),
-            ('temp_mos4', 'h', 10),
-            ('temp_mos5', 'h', 10),
-            ('temp_mos6', 'h', 10),
-            ('temp_pcb',  'h', 10),
+            ('temp_fet', 'h', 10),
+            ('temp_motor', 'h', 10),
             ('current_motor', 'i', 100),
-            ('current_in',  'i', 100),
-            ('duty_now',    'h', 1000),
-            ('rpm',         'i', 1),
-            ('v_in',        'h', 10),
-            ('amp_hours',   'i', 10000),
+            ('current_in', 'i', 100),
+            ('avg_id', 'i', 100),
+            ('avg_iq', 'i', 100),
+            ('duty_now', 'h', 1000),
+            ('rpm', 'i', 1),
+            ('v_in', 'h', 10),
+            ('amp_hours', 'i', 10000),
             ('amp_hours_charged', 'i', 10000),
-            ('watt_hours',  'i', 10000),
+            ('watt_hours', 'i', 10000),
             ('watt_hours_charged', 'i', 10000),
             ('tachometer', 'i', 1),
             ('tachometer_abs', 'i', 1),
-            ('mc_fault_code', 'c')
+            ('mc_fault_code', 'c'),
+            ('unknown', 'i', 1)            
     ]
 
 
